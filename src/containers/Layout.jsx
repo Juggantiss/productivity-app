@@ -32,9 +32,12 @@ const Layout = ({ window, children }) => {
       <Box
         component="main"
         sx={{
+          display: "flex",
           flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${240}px)` }
+          marginTop: 10,
+          width: { sm: `calc(100% - ${240}px)` },
+          alignItems: "center",
+          justifyContent: "center"
         }}
       >
         <Toolbar />

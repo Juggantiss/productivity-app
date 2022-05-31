@@ -1,9 +1,7 @@
-import Typography from "@mui/material/Typography";
+import FormAddTodo from "../components/Forms/FormAddTodo";
 
-const AddTodo = () => (
-  <Typography variant="h2" component="div" gutterBottom>
-    Add Todo
-  </Typography>
-);
+const AddTodo = () => {
+  return <FormAddTodo />;
+};
 
 export default AddTodo;
