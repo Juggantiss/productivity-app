@@ -1,7 +1,8 @@
 import { TYPE_TODO } from "../actions/todo";
 
 const initialState = {
-  todo: []
+  todos: [],
+  checkAddDuration: false
 };
 
 export const todoReducer = (state = initialState, action) => {
@@ -9,7 +10,12 @@ export const todoReducer = (state = initialState, action) => {
     case TYPE_TODO.ADD_TODO:
       return {
         ...state,
-        todo: [...state.todo, action.payload]
+        todos: [...state.todos, action.payload]
+      };
+    case TYPE_TODO.TOGGLE_ADD_DURATION:
+      return {
+        ...state,
+        checkAddDuration: !state.checkAddDuration
       };
     case TYPE_TODO.TOGGLE_RESET:
       return initialState;
